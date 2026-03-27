@@ -1,0 +1,78 @@
+import { useMediaQuery, Box, Drawer } from "@mui/material";
+import SidebarItems from "./SidebarItems";
+const Sidebar = ({
+  isMobileSidebarOpen,
+  onSidebarClose,
+  userType,
+  toggleDrawer,
+  drawerWidth
+}) => {
+  const lgUp = useMediaQuery((theme) => theme.breakpoints.up("lg"));
+
+  const sidebarWidth = drawerWidth;
+  // if (!lgUp) {
+  //   return (
+  //     <Drawer
+  //       anchor="left"
+  //       open={isMobileSidebarOpen}
+  //       onClose={onSidebarClose}
+  //       variant="temporary"
+  //       PaperProps={{
+  //         sx: {
+  //           width: sidebarWidth,
+  //           boxShadow: (theme) => theme.shadows[8],
+  //         },
+  //       }}
+  //     >
+  //       <Box px={2}>
+  //         <DarkLogo />
+  //       </Box>
+  //       <Box mt={3}><SidebarItems userType={userType} /></Box>
+  //     </Drawer>
+  //   );
+  // }
+
+  return (
+    <Box
+      sx={{
+        width: sidebarWidth,
+        flexShrink: 0,
+        zIndex: 100,
+      }}
+    >
+      <Drawer
+        anchor="left"
+        open={isMobileSidebarOpen}
+        onClose={onSidebarClose}
+        variant="permanent"
+        PaperProps={{
+          sx: {
+            width: sidebarWidth,
+            boxSizing: "border-box",
+            border: "0",
+            top: "40px",
+            boxShadow: "1px 0 20px #00000014",
+            boxSizing: "border-box",
+            transition: "all 0.3s",
+            overflow: "hidden"
+          },
+        }}
+      >
+        <Box
+          sx={{
+            height: "100%",
+          }}
+        >
+          <Box sx={{
+            //  height: "calc(100vh - 70px)",
+             overflow: "auto", 
+          }}>
+            <Box mt={1.5}><SidebarItems userType={userType} isMobileSidebarOpen={isMobileSidebarOpen} onSidebarClose={onSidebarClose}/></Box>
+          </Box>
+        </Box>
+      </Drawer>
+    </Box>
+  );
+};
+
+export default Sidebar;

@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.textfieldstylefont {
+  font-size: 13px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  border-radius: 15px;
+}
+
+.fontInput {
+  font-size: 12px; /* Adjust the font size as needed */
+  padding: 2px !important; /* Adjust the padding as needed */
+  font-weight: 600;
+  font-family: "Nunito", sans-serif;
+  color: black;
+}
+
+.css-1c770t-MuiAutocomplete-root .MuiOutlinedInput-root {
+  padding: 0;
+}
+.css-fe7ccf-MuiInputBase-input-MuiOutlinedInput-input {
+  padding: 8px 14px;
+}
+
+/* In your CSS file or <style> tag */
+.red-small-text {
+  color: rgb(248, 85, 85);
+  font-size: 12px;
+}
+
+.small-grey-text {
+  font-size: 12px;
+  color: grey;
+}
