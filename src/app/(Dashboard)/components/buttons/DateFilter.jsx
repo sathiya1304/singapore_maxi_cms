@@ -1,6 +1,8 @@
+"use client";
 import React, {useState} from "react";
+import dynamic from "next/dynamic";
 import SortIcon from "@mui/icons-material/Sort";
-import DatePickerPage from "@/app/(Dashboard)/components/container/DataRange";
+const DatePickerPage = dynamic(() => import("@/app/(Dashboard)/components/container/DataRange"), { ssr: false });
 import {
   Typography,
   Menu,

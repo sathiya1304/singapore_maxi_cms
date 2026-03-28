@@ -1,3 +1,4 @@
+"use client";
 import { addDays } from 'date-fns';
 import { useState } from 'react';
 import { DateRangePicker } from 'react-date-range';
