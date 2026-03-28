@@ -5,6 +5,8 @@ export const API_ENDPOINT = "https://web-production-a760c.up.railway.app/";
 // export const API_ENDPOINT = "http://192.168.29.183:8008/";
 
 export const API_TOKEN = "Th45Dc@g9K3gaFuWlaLV901Ds2";
+
+export const allowedPathsByUserType = {};
 export const capitalizeText = (text) => {
   if (text) {
     return text.charAt(0).toUpperCase() + text.slice(1);

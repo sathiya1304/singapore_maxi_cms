@@ -1,5 +1,4 @@
-
-
+"use client";
 import { createContext, useContext, useEffect, useState } from "react";
 import Cookies from "js-cookie";
 import { axiosGet } from "@/lib/api";
