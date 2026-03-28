@@ -4,7 +4,10 @@ export default {
     images: {
         unoptimized: true,
     },
-    eslint: {
-        ignoreDuringBuilds: true,
-    },
+    transpilePackages: [
+        '@mui/x-date-pickers',
+        '@mui/x-charts',
+        '@mui/x-data-grid',
+        '@mui/x-tree-view',
+    ],
 };
