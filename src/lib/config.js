@@ -1,4 +1,4 @@
-export const API_ENDPOINT = "http://127.0.0.1:8000/";
+export const API_ENDPOINT = "https://web-production-a760c.up.railway.app/";
 // export const API_ENDPOINT = "https://api.singaporemaxi.com/";
 // export const API_ENDPOINT = "api.singaporemaxi.com";
 // export const  API_ENDPOINT = "http://192.168.29.187:8006/";
