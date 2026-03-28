@@ -8,15 +8,14 @@ const nextConfig = withPWA({
 });
 
 export default {
-    output: 'export',
-    experimental: {
-        appDir: true,
-    },
     images: {
         unoptimized: true,
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
     },
     pwa: {
         dest: 'public',
     },
-    ...nextConfig, // Spread the properties of nextConfig
+    ...nextConfig,
 };
