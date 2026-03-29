@@ -1348,7 +1348,7 @@ const AccessoryMaster = () => {
                               <input
                                 type="file"
                                 accept="image/*"
-                                onClick={handleFileChange}
+                                onChange={handleFileChange}
                                 style={{ display: 'none' }}
                                 id="upload-photo-1"
                               />
