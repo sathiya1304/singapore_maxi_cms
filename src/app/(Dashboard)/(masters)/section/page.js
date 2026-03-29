@@ -400,7 +400,6 @@ const AccessoryMaster = () => {
               setTimeout(() => {
                 setAlertVisible(false);
               }, 3000);
-              router.back();
             } else {
               if (response.data.message_type === "specific") {
                 setPostError(response.data.message);
@@ -454,8 +453,6 @@ const AccessoryMaster = () => {
               setTimeout(() => {
                 setAlertVisible(false);
               }, 3000);
-              router.back();
-              fetchData();
             } else {
               if (response.data.message_type === "specific") {
                 setPostError(response.data.message);
@@ -937,7 +934,7 @@ const AccessoryMaster = () => {
               </label>
             )}
 
-            <p class="small-grey-text">
+            <p className="small-grey-text">
               The maximum file size that can be uploaded is 1.5 MB.
             </p>
           </Stack>
