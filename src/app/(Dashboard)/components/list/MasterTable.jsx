@@ -234,9 +234,7 @@ function EnhancedTableToolbar(props) {
         {numSelected} selected
       </Typography>
       <Box sx={{ display: "flex", gap: 1, alignItems: "center" }}>
-        <Tooltip placement="top" title="Change Status">
-          {ActionComponent()}
-        </Tooltip>
+        {ActionComponent()}
 
         <Tooltip placement="top" title="Delete">
           <IconButton onClick={onDelete}>
