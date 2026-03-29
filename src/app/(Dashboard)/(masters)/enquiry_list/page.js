@@ -635,7 +635,7 @@ const AccessoryMaster = () => {
     const jsonData = {
       access_token: ACCESS_TOKEN,
       data_ids: selectedItems,
-      approval_status: actionAppData,
+      status: actionAppData,
     };
     axiosPost
       .post(`change_enquiry_status`, jsonData)
@@ -978,7 +978,7 @@ const AccessoryMaster = () => {
               </Box>
             </Box>
           ),
-          id: 8,
+          id: 9,
         },
         
         {
@@ -992,7 +992,7 @@ const AccessoryMaster = () => {
               <MoreVertOutlined></MoreVertOutlined>
             </IconButton>
           ),
-          id: 9,
+          id: 10,
           align: "center",
         },
       ],
