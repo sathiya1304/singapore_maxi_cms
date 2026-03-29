@@ -574,7 +574,7 @@ const AccessoryMaster = () => {
             );
             setDisplayType('list')
             setShowBox(false);
-            setButtonClicked(false);
+            setButtonClicked(false)
             setBlockName('')
             setUniqBlockName('')
             setSlugName('')
@@ -590,7 +590,6 @@ const AccessoryMaster = () => {
             setTimeout(() => {
               setAlertVisible(false);
             }, 3000);
-            router.back();
           } else {
 
             if (response.data.message_type === "specific") {
@@ -640,7 +639,7 @@ const AccessoryMaster = () => {
     try {
 
       axiosPost
-        .post(`contentitems `, jsonStructure)
+        .post(`contentitems`, jsonStructure)
         .then((response) => {
           // Handle the successful POST response here
           if (response.data.action === "success") {
@@ -671,7 +670,6 @@ const AccessoryMaster = () => {
             setTimeout(() => {
               setAlertVisible(false);
             }, 3000);
-            router.back();
           } else {
 
             if (response.data.message_type === "specific") {
@@ -779,15 +777,12 @@ const AccessoryMaster = () => {
         .put(`contentitems`, jsonData)
         .then((response) => {
           if (response.data.action === "success") {
-            fetchData()
+            fetchData(ACCESS_TOKEN, limit, limitEnd, searchValue, createdStartDate, createdEndDate, actveStatus, selectedSectionID)
             setAlertVisible(true);
             setAlertSeverity("success");
             setAlertMessage(response.data.message);
-            setOpenEditDrawer(false);
             setIsLoading(false);
-            setOpenEditDrawer(false)
             setOpenContentEditDrawer(false)
-            fetchData()
             setContentValue('')
             setPositionValue('')
             setKeyName('')
@@ -1054,7 +1049,7 @@ const AccessoryMaster = () => {
       .delete(`contentitems`, { data: jsonData })
       .then((response) => {
 
-        handleClose2();
+        setDltOpen(false);
         setAlertMessage("Deleted successfully.");
         setAlertVisible(true);
         setSingleItem([])
@@ -1067,7 +1062,7 @@ const AccessoryMaster = () => {
           createdStartDate,
           createdEndDate,
           actveStatus,
-          id,
+          selectedSectionID,
           selectedContentID
         )
         setAlertSeverity("success");
@@ -1089,7 +1084,7 @@ const AccessoryMaster = () => {
       .delete(`blocks`, { data: jsonData })
       .then((response) => {
 
-        handleClose2();
+        setDltBlockOpen(false);
         setAlertMessage("Deleted successfully.");
         setAlertVisible(true);
         setSingleBlock([])
@@ -1102,7 +1097,7 @@ const AccessoryMaster = () => {
           createdStartDate,
           createdEndDate,
           actveStatus,
-          data[0]?.ContentBlockID
+          selectedSectionID
         );
         setAlertSeverity("success");
         setIsLoading(false);
