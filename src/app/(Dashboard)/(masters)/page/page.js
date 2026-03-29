@@ -380,7 +380,6 @@ const AccessoryMaster = () => {
             setTimeout(() => {
               setAlertVisible(false);
             }, 3000);
-            router.back();
           } else {
 
             if (response.data.message_type === "specific") {
@@ -429,8 +428,6 @@ const AccessoryMaster = () => {
             setTimeout(() => {
               setAlertVisible(false);
             }, 3000);
-            router.back();
-            fetchData();
           } else {
 
             if (response.data.message_type === "specific") {
